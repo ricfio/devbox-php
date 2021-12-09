@@ -1,0 +1,31 @@
+services:
+
+  nginx:
+    hostname: nginx
+    platform: linux/x86_64
+    build: .devcontainer/nginx
+    depends_on:
+      - php
+    environment:
+      PHP_FPM_IP: php
+      PHP_FPM_PORT: 9000
+    ports:
+      - "${APP_PORT:-8000}:80"
+    volumes:
+      - .:/app
+
+  php:
+    hostname: php
+    platform: linux/x86_64
+    build:
+      context: .devcontainer/php
+      target: dev
+      args:
+        - PHP_VERSION=${PHP_VERSION:-8.0}
+    ports:
+      - "${PHP_PORT:-9000}:9000"
+      - "${XDEBUG_CLIENT_PORT:-9003}:9003"
+    volumes:
+      - .:/app
+      - .devcontainer/php/conf.d/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+      - .devcontainer/php/conf.d/error_reporting.ini:/usr/local/etc/php/conf.d/error_reporting.ini

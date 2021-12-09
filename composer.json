@@ -1,0 +1,33 @@
+{
+    "name": "ricfio/devbox-php",
+    "description": "Developer BOX for PHP",
+    "type": "project",
+    "license": "MIT",
+    "version": "0.1.0",
+    "authors": [
+        {
+            "name": "Riccardo Fiorenza",
+            "email": "ricfio.professional@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\" : "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\" : "tests/"
+        }
+    },
+    "require": {
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "psalm/plugin-phpunit": "^0.16.1",
+        "phpstan/phpstan": "^1.2",
+        "phpmd/phpmd": "^2.11",
+        "phparkitect/phparkitect": "^0.2.5",
+        "vimeo/psalm": "^4.10"
+    }
+}
