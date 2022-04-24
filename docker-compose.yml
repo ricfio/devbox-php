@@ -3,7 +3,7 @@ services:
   nginx:
     hostname: nginx
     platform: linux/x86_64
-    build: .devcontainer/nginx
+    build: docker/nginx
     depends_on:
       - php
     environment:
@@ -18,7 +18,7 @@ services:
     hostname: php
     platform: linux/x86_64
     build:
-      context: .devcontainer/php
+      context: docker/php
       target: dev
       args:
         - PHP_VERSION=${PHP_VERSION:-8.0}
@@ -27,5 +27,5 @@ services:
       - "${XDEBUG_CLIENT_PORT:-9003}:9003"
     volumes:
       - .:/app
-      - .devcontainer/php/conf.d/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
-      - .devcontainer/php/conf.d/php-overrides.ini:/usr/local/etc/php/conf.d/php-overrides.ini
+      - ./docker/php/conf.d/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+      - ./docker/php/conf.d/php-overrides.ini:/usr/local/etc/php/conf.d/php-overrides.ini
