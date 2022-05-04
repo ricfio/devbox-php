@@ -1,6 +1,6 @@
-# DevBOX PHP
+# Sandbox PHP (vanilla)
 
-DevBOX PHP is an empty developer box for PHP projects.
+A sandbox to develop [PHP](https://www.php.net/) projects.  
 
 ## Getting started
 
@@ -79,7 +79,7 @@ You can change `./scripts/git-hooks/pre-commit.sh` to customize it with your pre
 
 ### Packages
 
-This DevBOX includes the following packages:
+This sandbox includes the following packages:
 
 | Name           | Package                   |
 |----------------|---------------------------|
