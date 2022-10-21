@@ -15,7 +15,7 @@
         "**/vendor/**/vendor/**"
     ],
     "php.suggest.basic": false,
-    "php.validate.executablePath": "/usr/bin/php",
+    "php.validate.executablePath": "/usr/local/bin/php",
     //
     "[php]": {
         "editor.defaultFormatter": "junstyle.php-cs-fixer",
