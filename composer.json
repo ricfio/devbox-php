@@ -23,11 +23,11 @@
     "require": {
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.5",
+        "phpunit/phpunit": "^9.5.25",
         "psalm/plugin-phpunit": "^0.16.1",
-        "phpstan/phpstan": "^1.2",
-        "phpmd/phpmd": "^2.11",
-        "phparkitect/phparkitect": "^0.2.5",
-        "vimeo/psalm": "^4.10"
+        "phpstan/phpstan": "^1.8.10",
+        "phpmd/phpmd": "^2.13",
+        "phparkitect/phparkitect": "^0.2.32",
+        "vimeo/psalm": "^4.29"
     }
 }
